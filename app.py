@@ -22,7 +22,7 @@ def get_required_speciality(message):
     )
 
     try:
-        model = genai.GenerativeModel("gemini-pro")
+        model = genai.GenerativeModel("gemini-2.0-flash")
         response = model.generate_content(prompt)
         text_response = response.text.strip()
         match = re.search(r'\b(medical|firefighter|general)\b', text_response.lower())
